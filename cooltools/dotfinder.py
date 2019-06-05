@@ -1715,6 +1715,12 @@ def thresholding_step(centroids, obs_raw_name = observed_count_name):
     enrichment_factor_2 = 1.75
     enrichment_factor_3 = 2.0
     FDR_orphan_threshold = 0.02
+    
+    yeastfactor = .5
+    enrichment_factor_1 = (enrichment_factor_1 -1 ) * yeastfactor + 1
+    enrichment_factor_2 = (enrichment_factor_2 -1 ) * yeastfactor + 1
+    enrichment_factor_3 = (enrichment_factor_3 -1 ) * yeastfactor + 1
+    
     ######################################################################
     # # Temporarily remove orphans filtering, until q-vals are calculated:
     ######################################################################
